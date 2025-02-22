@@ -1,0 +1,1 @@
+/home/sob/Projects/lambert_w_function/target/debug/lambert_w_function: /home/sob/Projects/lambert_w_function/src/input.rs /home/sob/Projects/lambert_w_function/src/lambert.rs /home/sob/Projects/lambert_w_function/src/main.rs
