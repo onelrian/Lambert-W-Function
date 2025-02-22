@@ -1,11 +1,11 @@
-FROM rust:1.70 as builder
+FROM rust:latest as builder
 
 WORKDIR /app
 
 # Copy the project files
 COPY . .
 
-RUN cargo build --release
+RUN rm -f Cargo.lock && cargo build --release
 
 # Use a minimal base image for the final container
 FROM debian:buster-slim
