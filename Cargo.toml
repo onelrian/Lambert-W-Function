@@ -4,8 +4,18 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+assert_cmd = "2.0"
+predicates = "3.0"
 anyhow = "1.0.57"
 thiserror = "2.0.11"
 structopt = "0.3"
 log = "0.4.26"
 env_logger = "0.11.6"
+
+[[bin]]
+name = "lambert_w_function"
+path = "src/lib.rs"
+
+[lib]
+name = "lambert_w_function"
+path = "src/lib.rs"
