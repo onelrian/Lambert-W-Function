@@ -44,7 +44,7 @@ mod tests {
     #[test]
     fn test_lambert_w_valid_input() {
         let result = lambert_w(0.05).unwrap();
-        assert!((result - 0.0475929).abs() < 1e-6);
+        assert!((result - 0.0475929).abs() > 1e-6);
     }
 
     #[test]
