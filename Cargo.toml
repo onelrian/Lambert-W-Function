@@ -14,7 +14,7 @@ env_logger = "0.11.6"
 
 [[bin]]
 name = "lambert_w_function"
-path = "src/lib.rs"
+path = "src/main.rs"
 
 [lib]
 name = "lambert_w_function"
