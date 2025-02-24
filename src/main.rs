@@ -1,16 +1,12 @@
 use anyhow::{Context, Result};
-use lambert::lambert_w;
+use lambert_w_function::{lambert_w, Cli};
 use log::info;
-use input::Cli;
 
-
-
-
-fn main() -> Result<(),anyhow::Error> {
+fn main() -> Result<(), anyhow::Error> {
     env_logger::init();
-   
+
     let args = Cli::new();
-    info!("Computing Lambert W for x = {}", Cli::get(&args));
+    info!("Computing Lambert W for x = {}", args.get());
 
     match lambert_w(args.get()) {
         Ok(result) => {
@@ -23,5 +19,3 @@ fn main() -> Result<(),anyhow::Error> {
         }
     }
 }
-mod lambert;
-mod input;

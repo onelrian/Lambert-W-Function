@@ -36,3 +36,20 @@ pub fn lambert_w(x: f64) -> Result<f64> {
 
     Err(anyhow::anyhow!("Failed to converge"))
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_lambert_w_valid_input() {
+        let result = lambert_w(0.05).unwrap();
+        assert!((result - 0.0475929).abs() < 1e-6);
+    }
+
+    #[test]
+    fn test_lambert_w_out_of_domain() {
+        let result = lambert_w(-1.0);
+        assert!(result.is_err());
+    }
+}
