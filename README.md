@@ -1,33 +1,28 @@
-# Lambert W Function in Rust
 
-Overview
+# Lambert W Function in Rust 🦀
 
-This Rust 🦀 project implements the Lambert W function, which is the inverse function of . The project includes a CLI interface, error handling, testing, and Docker support.
+This project implements the Lambert W function in Rust. The Lambert W function is a mathematical function that is used to solve equations of the form `f(x) = x * exp(x)`.
 
-Features
-    •    Implementation of the Lambert W function with error handling
-    •    Command-line interface (CLI) for evaluating W(x)
-    •    Unit and integration tests for reliability
-    •    CI/CD with GitHub Actions for automated testing and Docker deployment
-    •    Docker support for easy deployment
+## Description
+
+The Lambert W function is a transcendental function that is used in many areas of mathematics and physics, including calculus, differential equations, and number theory. It is defined as the inverse function of the function `f(x) = x * exp(x)`, and it has two branches: the principal branch `W_0` and the secondary branch `W_{-1}`.
 
 
+## Usage
 
-___Clone the Repository___
+To use this project, you can run the following command:
 
-```
-git clone https://github.com/onelrian/lambert_w_function.git  
-cd lambert_w_function  
+```bash
+cargo run --release -- <input_value>
 ```
 
-___Build the Project___
+Replace `<input_value>` with the value you want to pass to the Lambert W function.
 
-```
-cargo build --release  
+## Tests
+
+This project includes several tests to ensure that the Lambert W function is working correctly. You can run the tests using the following command:
+
+```bash
+cargo test
 ```
 
-___Run the CLI___
-
-```
-cargo run --release -- <input_value>  
-```
